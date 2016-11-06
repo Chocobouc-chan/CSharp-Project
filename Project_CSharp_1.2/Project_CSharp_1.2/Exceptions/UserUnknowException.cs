@@ -8,8 +8,16 @@ namespace Project_CSharp_1._2.Exceptions
 {
     namespace PersException
     {
-        class UserUnknowException
+        class UserUnknowException : AuthentificationException
         {
+            public UserUnknowException(String message, String log)
+                : base(message, log)
+            { }
+
+            public void displayError()
+            {
+                Console.WriteLine(this.Message);
+            }
         }
     }
 }

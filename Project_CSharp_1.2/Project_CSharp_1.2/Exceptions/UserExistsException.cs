@@ -14,7 +14,7 @@ namespace Project_CSharp_1._2.Exceptions
                 : base(message, log)
             { }
 
-            public void DisplayLogReportShow()
+            public void displayError()
             {
                 Console.WriteLine(this.Message);
             }

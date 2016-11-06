@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace Project_CSharp_1._2.Exceptions
 {
-    namespace PersoException
+    namespace PersException
     {
-        class WrongPasswordException
+        class WrongPasswordException : AuthentificationException
         {
+            public WrongPasswordException(String message, String log)
+                : base(message, log)
+            { }
+
+            public void displayError()
+            {
+                Console.WriteLine(this.Message);
+            }
+
         }
     }
 }
